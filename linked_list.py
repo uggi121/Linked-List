@@ -82,6 +82,19 @@ def delete_after(node):
     if node.next:
         node.next = node.next.next
         
+def print_all(node):
+    """
+    Prints all the values in a sequence of nodes(linked-list).
+    
+    Parameters:
+        node (Listnode): Head of the linked-list.
+    """
+    
+    ptr = node
+    while ptr:
+        print(ptr.data, end=' ')
+        ptr = ptr.next
+        
 class LinkedList:
     """
     Represents a linked list.
