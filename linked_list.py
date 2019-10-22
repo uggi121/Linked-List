@@ -193,6 +193,17 @@ class LinkedList:
             return True
         return False
     
+    def add_all(self, collection):
+        """
+        Adds all the values from a collection to the linked-list.
+        
+        Parameters:
+            collection (collection): Collection of items to be added.
+        """
+        
+        for i in collection:
+            self.add(i)
+    
     def __str__(self):
         return str(self.head) if self.head else "Empty List"
     
