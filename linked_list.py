@@ -12,11 +12,25 @@ Created on Tue Oct 22 14:44:07 2019
 @author: Sudharshan
 """
 
+"""
+Represents the node of a linked-list.
+
+Contains a single value along with a reference to the next node.
+"""
 class ListNode:
+    """
+    Constructs a ListNode.
+    
+    Accepts a data value and a reference to the next node as inputs.
+    
+    Parameters:
+        data : Value to be stored in the node.
+        next_node (ListNode) : Reference to the next node.
+    """
     def __init__(self, data, next_node=None):
         self.data = data
         self.next = next_node
-        
+    
     def __unicode__(self):
         return "[" + str(self.data) + "]"
     
@@ -26,10 +40,11 @@ class ListNode:
     def __repr__(self):
         return self.__unicode__()
 
+# Helper functions to process linked-lists.
 def search_list(L, key):
     while L != None and L.data != key:
         L = L.next
-    return True if L else False
+    return L
 
 def insert_after(node, new_node):
     new_node.next = node.next
